@@ -8,6 +8,7 @@
       <meta name="description" content="思いたったらすぐ開発. プログラミングに革命を..." />
       <style>image {
          touch-action: none;
+   width: 100%
          }
          body {
          padding: 0;
@@ -18,7 +19,8 @@
    </head>
    <body>
       <input type="" />
-      <script>const i = document.createElement("input")
+      <script>
+        document.body.onclick = () => {const i = document.createElement("input")
          i.type = 'file'
          i.oninput = e => {
            const blob = e.target.files[0]
@@ -26,7 +28,7 @@
            img.src = URL.createObjectURL(blob)
            document.body.append(img)
          }
-         i.click()
+         i.click()}
       </script>
    </body>
 </html>
